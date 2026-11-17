@@ -1,0 +1,22 @@
+DATATREE 2.0 — INÍCIO RÁPIDO
+
+1) Instale Node.js 18.18+ (recomendo Node 20 ou 22 LTS).
+2) Abra a pasta DataTree-v2 no VS Code.
+3) Abra dois terminais.
+
+TERMINAL 1:
+cd server
+npm install
+npm run dev
+
+TERMINAL 2:
+cd client
+npm install
+npm run dev
+
+4) Abra http://localhost:5173
+5) Teste com:
+Email: ana@datatree.local
+Senha: 123456
+
+Se o comando "cd server" disser que a pasta não existe, você abriu o VS Code na pasta errada. Use File > Open Folder e selecione a pasta que contém as pastas client e server.

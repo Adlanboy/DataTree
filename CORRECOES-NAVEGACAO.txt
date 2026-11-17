@@ -1,0 +1,26 @@
+DataTree 2.0 - Ajustes de estabilidade da navegação
+
+Alterações nesta versão:
+- Feed: impede que respostas de carregamentos antigos atualizem a tela após a troca de página; cancela requisições quando a página é desmontada.
+- Arquivos: impede atualizações de estado após sair da página durante o carregamento.
+- Mensagens: isola o carregamento por conversa, invalida respostas atrasadas ao trocar de contato e evita sobreposição de consultas periódicas.
+- Conversas: protege a lista contra respostas antigas quando consultas concorrentes terminam fora de ordem.
+- Perfis públicos e perfil próprio: evita atualizações de estado após desmontagem e limpa dados antigos ao trocar de perfil.
+- Notificações: impede consultas periódicas sobrepostas e corrige temporizadores de avisos concorrentes.
+- Sessão inicial: evita atualizar o estado depois que a tela de autenticação é desmontada.
+
+Não foram adicionadas funcionalidades nem alterados estilos visuais.
+
+Execução local:
+1. Terminal 1:
+   cd DataTree-v2/server
+   npm install
+   npm run dev
+2. Terminal 2:
+   cd DataTree-v2/client
+   npm install
+   npm run dev
+3. Acesse http://localhost:5173
+
+O banco de dados local fica em server/data e os uploads em server/uploads.
+Faça backup dessas pastas antes de substituir uma instalação existente.

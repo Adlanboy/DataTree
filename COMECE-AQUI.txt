@@ -1,0 +1,63 @@
+DATATREE 2.0 — PACOTE COMPLETO
+
+Este ZIP contém o projeto inteiro: frontend, backend, banco SQLite criado automaticamente e arquivos enviados pelos usuários (a pasta uploads).
+Você NÃO precisa copiar arquivos de outra versão antiga.
+
+REQUISITOS
+- Node.js 20 ou 22 LTS recomendado (Node 24 também pode funcionar; veja a observação abaixo).
+- npm
+
+INSTALAÇÃO NO ZORIN OS / LINUX
+1. Extraia o ZIP.
+2. Abra a pasta DataTree-v2 no VS Code.
+3. Abra um terminal e execute:
+
+   cd server
+   npm install
+   npm run dev
+
+4. Deixe esse terminal aberto. Abra OUTRO terminal no VS Code e execute:
+
+   cd client
+   npm install
+   npm run dev
+
+5. Abra no navegador: http://localhost:5173
+
+O backend responde em: http://localhost:3001/api/health
+Não abra a porta 3001 esperando encontrar o site; ela é a API.
+
+CONTAS DE DEMONSTRAÇÃO
+Ana: ana@datatree.local | senha: 123456
+Lucas: lucas@datatree.local | senha: 123456
+As contas são criadas automaticamente quando o banco ainda não possui usuários.
+
+BANCO E ARQUIVOS
+O banco é criado automaticamente em server/data/datatree.sqlite na primeira execução.
+Os uploads ficam em server/uploads.
+Não apague essas pastas se quiser preservar os dados locais.
+
+SE better-sqlite3 DER ERRO DE COMPILAÇÃO
+No terminal, dentro da pasta server, execute:
+
+   sudo apt update
+   sudo apt install -y build-essential python3
+   npm rebuild better-sqlite3 --build-from-source
+   npm run dev
+
+OBSERVAÇÃO
+O ZIP inclui o código-fonte completo e uma compilação de produção do frontend em client/dist.
+Para desenvolvimento, use os comandos npm acima. As dependências são instaladas com npm install; não é necessário reaproveitar node_modules de outro projeto.
+
+
+REVISÃO CORRIGIDA
+- Extraia o ZIP para uma pasta de sua preferência.
+- Abra a pasta DataTree-v2 no VS Code.
+- Confira Node com: node --version (18.18 ou superior).
+- Terminal 1: cd server && npm install && npm run dev
+- Terminal 2: cd client && npm install && npm run dev
+- Abra http://localhost:5173 (não abra o arquivo index.html diretamente).
+- API: http://localhost:3001/api/health
+- Para encerrar, use Ctrl+C em cada terminal.
+
+O banco SQLite e os uploads são criados dentro de server/data e server/uploads na primeira execução. Faça cópia dessas pastas antes de substituir uma instalação que já contenha dados.
